@@ -6,43 +6,67 @@ public class Automovil {
   private double cilindrada;
   private int capacidadEstanque = 40;
 
-  public String leerFabricante(){
-    return this.fabricante;
+  public Automovil() {
   }
 
-  public String leerModelo(){
-    return this.modelo;
-  }
-  public String leerColor(){
-    return this.color;
-  }
-
-  public double leerCilindrada(){
-    return this.cilindrada;
-  }
-
-  public int leerCapacidadEstanque(){
-    return this.capacidadEstanque;
+  @Override
+  public String toString() {
+    return "Automovil{" +
+            "fabricante='" + fabricante + '\'' +
+            ", modelo='" + modelo + '\'' +
+            ", color='" + color + '\'' +
+            ", cilindrada=" + cilindrada +
+            ", capacidadEstanque=" + capacidadEstanque +
+            '}';
   }
 
-  public void asignarFabricante(String fabricante){
+  public Automovil(String fabricante, String modelo, String color, double cilindrada, int capacidadEstanque) {
     this.fabricante = fabricante;
-  }
-
-  public void asignarModelo(String modelo){
     this.modelo = modelo;
-  }
-  public void asignarColor(String color){
     this.color = color;
-  }
-  public void asignarCilindrada(double cilindrada){
     this.cilindrada = cilindrada;
-  }
-  public void asignarCapacidadEstanque(int capacidadEstanque){
     this.capacidadEstanque = capacidadEstanque;
   }
 
+  public String getFabricante() {
+    return fabricante;
+  }
 
+  public void setFabricante(String fabricante) {
+    this.fabricante = fabricante;
+  }
+
+  public String getModelo() {
+    return modelo;
+  }
+
+  public void setModelo(String modelo) {
+    this.modelo = modelo;
+  }
+
+  public String getColor() {
+    return color;
+  }
+
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+  public double getCilindrada() {
+    return cilindrada;
+  }
+
+  public void setCilindrada(double cilindrada) {
+    this.cilindrada = cilindrada;
+  }
+
+  public int getCapacidadEstanque() {
+    return capacidadEstanque;
+  }
+
+  public void setCapacidadEstanque(int capacidadEstanque) {
+    this.capacidadEstanque = capacidadEstanque;
+  }
 
   public String verDetalle(){
     return "\nauto.fabricante = " + this.fabricante +
